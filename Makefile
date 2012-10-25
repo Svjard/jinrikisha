@@ -1,4 +1,4 @@
-NODE_PREFIX=$(shell npm prefix)
+NODE_PREFIX=.
 NODE_MODULES=$(NODE_PREFIX)/node_modules
 
 CSS_MIN=$(NODE_MODULES)/.bin/cleancss
@@ -29,7 +29,6 @@ JS_FILES=\
 	src/js/Jinrikisha.Graph.HoverDetail.js\
 	src/js/Jinrikisha.Graph.JSONP.js\
 	src/js/Jinrikisha.Graph.Legend.js\
-	src/js/Jinrikisha.Graph.RangeSlider.js\
 	src/js/Jinrikisha.Graph.Renderer.js\
 	src/js/Jinrikisha.Graph.Renderer.Line.js\
 	src/js/Jinrikisha.Graph.Renderer.Stack.js\
