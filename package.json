@@ -1,11 +1,11 @@
 {
-   "name": "rickshaw",
+   "name": "jinrikisha",
    "version": "1.1.2",
    "dependencies": {
       "d3": ">= 2.10.1"
    },
-   "keywords": ["d3", "charts", "rickshaw", "svg", "graph"],
-   "main": "./rickshaw",
+   "keywords": ["d3", "charts", "jinrikisha", "svg", "graph"],
+   "main": "./jinrikisha",
    "engines": {
       "node": ">= 0.8.0"
    }

@@ -1,8 +1,8 @@
 <!doctype>
-<link type="text/css" rel="stylesheet" href="../rickshaw.min.css">
+<link type="text/css" rel="stylesheet" href="../jinrikisha.min.css">
 <script src="../vendor/d3.min.js"></script>
 <script src="../vendor/d3.layout.min.js"></script>
-<script src="../rickshaw.min.js"></script>
+<script src="../jinrikisha.min.js"></script>
 
 <style>
 #chart_container {
@@ -40,9 +40,9 @@
 </div>
 
 <script>
-var palette = new Rickshaw.Color.Palette();
+var palette = new Jinrikisha.Color.Palette();
 
-var graph = new Rickshaw.Graph( {
+var graph = new Jinrikisha.Graph( {
 	element: document.querySelector("#chart"),
 	width: 540,
 	height: 240,
@@ -71,16 +71,16 @@ var graph = new Rickshaw.Graph( {
 	]
 } );
 
-var x_axis = new Rickshaw.Graph.Axis.Time( { graph: graph } );
+var x_axis = new Jinrikisha.Graph.Axis.Time( { graph: graph } );
 
-var y_axis = new Rickshaw.Graph.Axis.Y( {
+var y_axis = new Jinrikisha.Graph.Axis.Y( {
 	graph: graph,
 	orientation: 'left',
-	tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
+	tickFormat: Jinrikisha.Fixtures.Number.formatKMBT,
 	element: document.getElementById('y_axis'),
 } );
 
-var legend = new Rickshaw.Graph.Legend( {
+var legend = new Jinrikisha.Graph.Legend( {
 	element: document.querySelector('#legend'),
 	graph: graph
 } );

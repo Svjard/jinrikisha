@@ -1,16 +1,16 @@
 /* graph */
 
-.rickshaw_graph {
+.jinrikisha_graph {
 	position: relative;
 }
-.rickshaw_graph svg {
+.jinrikisha_graph svg {
 	display: block;	
 	overflow: hidden;
 }
 
 /* ticks */
 
-.rickshaw_graph .x_tick {
+.jinrikisha_graph .x_tick {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -18,7 +18,7 @@
 	border-left: 1px dotted rgba(0, 0, 0, 0.2);
 	pointer-events: none;
 }
-.rickshaw_graph .x_tick .title {
+.jinrikisha_graph .x_tick .title {
 	position: absolute;
 	font-size: 12px;
 	font-family: Arial, sans-serif;
@@ -30,13 +30,13 @@
 
 /* annotations */
 
-.rickshaw_annotation_timeline {
+.jinrikisha_annotation_timeline {
 	height: 1px;
 	border-top: 1px solid #e0e0e0;
 	margin-top: 10px;
 	position: relative;
 }
-.rickshaw_annotation_timeline .annotation {
+.jinrikisha_annotation_timeline .annotation {
 	position: absolute;
 	height: 6px;
 	width: 6px;
@@ -45,7 +45,7 @@
 	border-radius: 5px;
 	background-color: rgba(0, 0, 0, 0.25);
 }
-.rickshaw_graph .annotation_line {
+.jinrikisha_graph .annotation_line {
 	position: absolute;
 	top: 0;
 	bottom: -6px;
@@ -53,11 +53,11 @@
 	border-left: 2px solid rgba(0, 0, 0, 0.3);
 	display: none;
 }
-.rickshaw_graph .annotation_line.active {
+.jinrikisha_graph .annotation_line.active {
 	display: block;
 }
 
-.rickshaw_graph .annotation_range {
+.jinrikisha_graph .annotation_range {
         background: rgba(0, 0, 0, 0.1);
         display: none;
         position: absolute;
@@ -65,14 +65,14 @@
         bottom: -6px;
         z-index: -10;
 }
-.rickshaw_graph .annotation_range.active {
+.jinrikisha_graph .annotation_range.active {
         display: block;
 }
-.rickshaw_graph .annotation_range.active.offscreen {
+.jinrikisha_graph .annotation_range.active.offscreen {
         display: none;
 }
 
-.rickshaw_annotation_timeline .annotation .content {
+.jinrikisha_annotation_timeline .annotation .content {
 	background: white;
 	color: black;
 	opacity: 0.9;
@@ -89,58 +89,58 @@
 	display: none;
 	cursor: pointer;
 }
-.rickshaw_annotation_timeline .annotation .content:before {
+.jinrikisha_annotation_timeline .annotation .content:before {
 	content: "\25b2";
 	position: absolute;
 	top: -11px;
 	color: white;
 	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.8);
 }
-.rickshaw_annotation_timeline .annotation.active,
-.rickshaw_annotation_timeline .annotation:hover {
+.jinrikisha_annotation_timeline .annotation.active,
+.jinrikisha_annotation_timeline .annotation:hover {
 	background-color: rgba(0, 0, 0, 0.8);
 	cursor: none;
 }
-.rickshaw_annotation_timeline .annotation .content:hover {
+.jinrikisha_annotation_timeline .annotation .content:hover {
 	z-index: 50;
 }
-.rickshaw_annotation_timeline .annotation.active .content {
+.jinrikisha_annotation_timeline .annotation.active .content {
 	display: block;
 }
-.rickshaw_annotation_timeline .annotation:hover .content {
+.jinrikisha_annotation_timeline .annotation:hover .content {
 	display: block;
 	z-index: 50;
 }
-.rickshaw_graph .y_axis {
+.jinrikisha_graph .y_axis {
 	fill: none;
 }
-.rickshaw_graph .y_ticks .tick {
+.jinrikisha_graph .y_ticks .tick {
 	stroke: rgba(0, 0, 0, 0.16);
 	stroke-width: 2px;
 	shape-rendering: crisp-edges;
 	pointer-events: none;
 }
-.rickshaw_graph .y_grid .tick {
+.jinrikisha_graph .y_grid .tick {
 	z-index: -1;
 	stroke: rgba(0, 0, 0, 0.20);
 	stroke-width: 1px;
 	stroke-dasharray: 1 1;
 }
-.rickshaw_graph .y_grid path {
+.jinrikisha_graph .y_grid path {
 	fill: none;
 	stroke: none;
 }
-.rickshaw_graph .y_ticks path {
+.jinrikisha_graph .y_ticks path {
 	fill: none;
 	stroke: #808080;
 }
-.rickshaw_graph .y_ticks text {
+.jinrikisha_graph .y_ticks text {
 	opacity: 0.5;
 	font-size: 12px;
 	pointer-events: none;
 }
-.rickshaw_graph .x_tick.glow .title,
-.rickshaw_graph .y_ticks.glow text {
+.jinrikisha_graph .x_tick.glow .title,
+.jinrikisha_graph .y_ticks.glow text {
 	fill: black;
 	color: black;
 	text-shadow: 
@@ -153,8 +153,8 @@
 		-1px 0px 0 rgba(255, 255, 255, 0.1),
 		-1px -1px 0 rgba(255, 255, 255, 0.1);
 }
-.rickshaw_graph .x_tick.inverse .title,
-.rickshaw_graph .y_ticks.inverse text {
+.jinrikisha_graph .x_tick.inverse .title,
+.jinrikisha_graph .y_ticks.inverse text {
 	fill: white;
 	color: white;
 	text-shadow: 

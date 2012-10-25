@@ -1,13 +1,13 @@
-# Rickshaw
+# Jinrikisha
 
-Rickshaw is a JavaScript toolkit for creating interactive time series graphs, developed at [Shutterstock](http://www.shutterstock.com)
+Jinrikisha is a JavaScript toolkit for creating interactive time series graphs, developed at [Shutterstock](http://www.shutterstock.com)
 
 ## Getting Started
 
 Getting started with a simple graph is straightforward.  Here's the gist:
 
 ```javascript
-var graph = new Rickshaw.Graph( {
+var graph = new Jinrikisha.Graph( {
   element: document.querySelector('#graph'),
   series: [
     {
@@ -22,11 +22,11 @@ var graph = new Rickshaw.Graph( {
 
 graph.render();
 ```
-See the [overview](http://code.shutterstock.com/rickshaw/), [tutorial](http://shutterstock.github.com/rickshaw/tutorial/introduction.html), and [examples](http://shutterstock.github.com/rickshaw/examples/) for more.
+See the [overview](http://code.shutterstock.com/jinrikisha/), [tutorial](http://shutterstock.github.com/jinrikisha/tutorial/introduction.html), and [examples](http://shutterstock.github.com/jinrikisha/examples/) for more.
 
-## Rickshaw.Graph 
+## Jinrikisha.Graph 
 
-A Rickshaw graph.  Send an `element` reference, `series` data, and optionally other properties to the constructor before calling `render()` to point the graph.  A listing of properties follows.  Send these as arguments to the constructor, and optionally set them later on already-instantiated graphs with a call to `configure()`
+A Jinrikisha graph.  Send an `element` reference, `series` data, and optionally other properties to the constructor before calling `render()` to point the graph.  A listing of properties follows.  Send these as arguments to the constructor, and optionally set them later on already-instantiated graphs with a call to `configure()`
 
 ##### element
 
@@ -88,33 +88,33 @@ Add a callback to run when the graph is rendered
 
 ## Extensions
 
-Once you have a basic graph, extensions let you add functionality.  See the [overview](http://code.shutterstock.com/rickshaw/) and [examples](http://shutterstock.github.com/rickshaw/examples/) listing for more.
+Once you have a basic graph, extensions let you add functionality.  See the [overview](http://code.shutterstock.com/jinrikisha/) and [examples](http://shutterstock.github.com/jinrikisha/examples/) listing for more.
  
-* __Rickshaw.Graph.Legend__ - add a basic legend
+* __Jinrikisha.Graph.Legend__ - add a basic legend
 
-* __Rickshaw.Graph.HoverDetail__ - show details on hover
+* __Jinrikisha.Graph.HoverDetail__ - show details on hover
 
-* __Rickshaw.Graph.JSONP__ - get data via a JSONP request
+* __Jinrikisha.Graph.JSONP__ - get data via a JSONP request
 
-* __Rickshaw.Graph.Annotate__ - add x-axis annotations
+* __Jinrikisha.Graph.Annotate__ - add x-axis annotations
 
-* __Rickshaw.Graph.RangeSlider__ - dynamically zoom on the x-axis with a slider
+* __Jinrikisha.Graph.RangeSlider__ - dynamically zoom on the x-axis with a slider
 
-* __Rickshaw.Graph.Axis.Time__ - add x-axis time labels
+* __Jinrikisha.Graph.Axis.Time__ - add x-axis time labels
 
-* __Rickshaw.Graph.Behavior.Series.Highlight__ - highlight series on legend hover
+* __Jinrikisha.Graph.Behavior.Series.Highlight__ - highlight series on legend hover
 
-* __Rickshaw.Graph.Behavior.Series.Order__ - reorder series in the stack with drag-and-drop
+* __Jinrikisha.Graph.Behavior.Series.Order__ - reorder series in the stack with drag-and-drop
 
-* __Rickshaw.Graph.Behavior.Series.Toggle__ - toggle series on and off through the legend
+* __Jinrikisha.Graph.Behavior.Series.Toggle__ - toggle series on and off through the legend
 
 
-## Rickshaw.Color.Palette
+## Jinrikisha.Color.Palette
 
-Rickshaw comes with a few color schemes. Instantiate a palette and specify a scheme name, and then call color() on the palette to get each next color.
+Jinrikisha comes with a few color schemes. Instantiate a palette and specify a scheme name, and then call color() on the palette to get each next color.
 
 ```javascript
-var palette = new Rickshaw.Color.Palette( { scheme: 'spectrum2001' } );
+var palette = new Jinrikisha.Color.Palette( { scheme: 'spectrum2001' } );
     
 palette.color() // => first color in the palette
 palette.color() // => next color in the palette...
@@ -134,16 +134,16 @@ palette.color() // => next color in the palette...
 
 For graphs with more series than palettes have colors, sepcify an `interpolatedStopsCount` to the palette constructor.
 
-## Rickshaw and Cross-Browser Support
+## Jinrikisha and Cross-Browser Support
 
 This library works in modern browsers and Internet Explorer 9.
 
-Rickshaw relies on the HTMLElement#classList API, which isn't natively supported in Internet Explorer 9.  Rickshaw adds support by including a shim which implements the classList API by extending the HTMLElement prototype.  You can disable this behavior if you like, by setting `RICKSHAW_NO_COMPAT` to a true value before including the library. 
+Jinrikisha relies on the HTMLElement#classList API, which isn't natively supported in Internet Explorer 9.  Jinrikisha adds support by including a shim which implements the classList API by extending the HTMLElement prototype.  You can disable this behavior if you like, by setting `RICKSHAW_NO_COMPAT` to a true value before including the library. 
 
 
 ## Dependencies & Building
 
-Rickshaw relies on the fantastic [D3 visualization library](http://mbostock.github.com/d3/) to do lots of the heavy lifting for stacking and rendering to SVG.
+Jinrikisha relies on the fantastic [D3 visualization library](http://mbostock.github.com/d3/) to do lots of the heavy lifting for stacking and rendering to SVG.
 
 Some extensions require [jQuery](http://jquery.com) and [jQuery UI](http://jqueryui.com), but for drawing some basic graphs you'll be okay without.
 

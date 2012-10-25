@@ -4,7 +4,7 @@
 
 <script src="../vendor/d3.v2.js"></script>
 
-<script src="../rickshaw.min.js"></script>
+<script src="../jinrikisha.min.js"></script>
 
 <style>
 section {
@@ -40,7 +40,7 @@ var schemes = [
 
 schemes.forEach( function(name) {
 
-	var palette = new Rickshaw.Color.Palette( { scheme: name } );
+	var palette = new Jinrikisha.Color.Palette( { scheme: name } );
 
 	var seriesData = [];
 
@@ -48,7 +48,7 @@ schemes.forEach( function(name) {
 		seriesData.push([]);
 	} );
 
-	var random = new Rickshaw.Fixtures.RandomData(150);
+	var random = new Jinrikisha.Fixtures.RandomData(150);
 
 	for (var i = 0; i < 100; i++) {
 		random.addData(seriesData);
@@ -73,7 +73,7 @@ schemes.forEach( function(name) {
 		} );
 	} );
 	
-	var graph = new Rickshaw.Graph( {
+	var graph = new Jinrikisha.Graph( {
 		element: element,
 		series: series
 	} );

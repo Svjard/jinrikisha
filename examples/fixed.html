@@ -7,30 +7,30 @@
 
 	<script src="../vendor/d3.v2.js"></script>
 
-	<script src="../src/js/Rickshaw.js"></script>
-	<script src="../src/js/Rickshaw.Class.js"></script>
-	<script src="../src/js/Rickshaw.Compat.ClassList.js"></script>
-	<script src="../src/js/Rickshaw.Graph.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Renderer.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Renderer.Stack.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Renderer.Line.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Renderer.Area.js"></script>
-	<script src="../src/js/Rickshaw.Graph.RangeSlider.js"></script>
-	<script src="../src/js/Rickshaw.Graph.HoverDetail.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Annotate.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Legend.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Axis.Time.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Behavior.Series.Toggle.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Behavior.Series.Order.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Behavior.Series.Highlight.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Smoother.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Unstacker.js"></script>
-	<script src="../src/js/Rickshaw.Fixtures.Time.js"></script>
-	<script src="../src/js/Rickshaw.Fixtures.RandomData.js"></script>
-	<script src="../src/js/Rickshaw.Fixtures.Color.js"></script>
-	<script src="../src/js/Rickshaw.Color.Palette.js"></script>
-	<script src="../src/js/Rickshaw.Series.js"></script>
-	<script src="../src/js/Rickshaw.Series.FixedDuration.js"></script>
+	<script src="../src/js/Jinrikisha.js"></script>
+	<script src="../src/js/Jinrikisha.Class.js"></script>
+	<script src="../src/js/Jinrikisha.Compat.ClassList.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Renderer.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Renderer.Stack.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Renderer.Line.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Renderer.Area.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.RangeSlider.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.HoverDetail.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Annotate.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Legend.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Axis.Time.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Behavior.Series.Toggle.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Behavior.Series.Order.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Behavior.Series.Highlight.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Smoother.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Unstacker.js"></script>
+	<script src="../src/js/Jinrikisha.Fixtures.Time.js"></script>
+	<script src="../src/js/Jinrikisha.Fixtures.RandomData.js"></script>
+	<script src="../src/js/Jinrikisha.Fixtures.Color.js"></script>
+	<script src="../src/js/Jinrikisha.Color.Palette.js"></script>
+	<script src="../src/js/Jinrikisha.Series.js"></script>
+	<script src="../src/js/Jinrikisha.Series.FixedDuration.js"></script>
 </head>
 <body>
 
@@ -43,12 +43,12 @@
 var tv = 250;
 
 // instantiate our graph!
-var graph = new Rickshaw.Graph( {
+var graph = new Jinrikisha.Graph( {
 	element: document.getElementById("chart"),
 	width: 900,
 	height: 500,
 	renderer: 'line',
-	series: new Rickshaw.Series.FixedDuration([{ name: 'one' }], undefined, {
+	series: new Jinrikisha.Series.FixedDuration([{ name: 'one' }], undefined, {
 		timeInterval: tv,
 		maxDataPoints: 100,
 		timeBase: new Date().getTime() / 1000

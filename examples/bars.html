@@ -7,7 +7,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js"></script>
 
-	<script src="../rickshaw.js"></script>
+	<script src="../jinrikisha.js"></script>
 </head>
 <body>
 
@@ -18,7 +18,7 @@
 // set up our data series with 50 random data points
 
 var seriesData = [ [], [], [] ];
-var random = new Rickshaw.Fixtures.RandomData(150);
+var random = new Jinrikisha.Fixtures.RandomData(150);
 
 for (var i = 0; i < 70; i++) {
 	random.addData(seriesData);
@@ -26,7 +26,7 @@ for (var i = 0; i < 70; i++) {
 
 // instantiate our graph!
 
-var graph = new Rickshaw.Graph( {
+var graph = new Jinrikisha.Graph( {
 	element: document.getElementById("chart"),
 	width: 960,
 	height: 500,

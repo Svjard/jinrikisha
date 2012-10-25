@@ -1,8 +1,8 @@
 <!doctype>
-<link rel="stylesheet" href="../rickshaw.min.css">
+<link rel="stylesheet" href="../jinrikisha.min.css">
 <script src="../vendor/d3.min.js"></script>
 <script src="../vendor/d3.layout.min.js"></script>
-<script src="../rickshaw.min.js"></script>
+<script src="../jinrikisha.min.js"></script>
 
 <div id="chart"></div>
 
@@ -10,7 +10,7 @@
 
 var data = [ { x: -1893456000, y: 92228531 }, { x: -1577923200, y: 106021568 }, { x: -1262304000, y: 123202660 }, { x: -946771200, y: 132165129 }, { x: -631152000, y: 151325798 }, { x: -315619200, y: 179323175 }, { x: 0, y: 203211926 }, { x: 315532800, y: 226545805 }, { x: 631152000, y: 248709873 }, { x: 946684800, y: 281421906 }, { x: 1262304000, y: 308745538 } ];
 
-var graph = new Rickshaw.Graph( {
+var graph = new Jinrikisha.Graph( {
 	element: document.querySelector("#chart"),
 	width: 580,
 	height: 250,
@@ -20,7 +20,7 @@ var graph = new Rickshaw.Graph( {
 	} ]
 } );
 
-var axes = new Rickshaw.Graph.Axis.Time( { graph: graph } );
+var axes = new Jinrikisha.Graph.Axis.Time( { graph: graph } );
 
 graph.render();
 

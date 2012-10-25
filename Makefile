@@ -10,43 +10,43 @@ CSS_FILES=\
 	src/css/legend.css\
 
 JS_FILES=\
-	src/js/Rickshaw.js\
-	src/js/Rickshaw.Class.js\
-	src/js/Rickshaw.Compat.ClassList.js\
-	src/js/Rickshaw.Graph.js\
-	src/js/Rickshaw.Fixtures.Color.js\
-	src/js/Rickshaw.Fixtures.RandomData.js\
-	src/js/Rickshaw.Fixtures.Time.js\
-	src/js/Rickshaw.Fixtures.Number.js\
-	src/js/Rickshaw.Color.Palette.js\
-	src/js/Rickshaw.Graph.Ajax.js\
-	src/js/Rickshaw.Graph.Annotate.js\
-	src/js/Rickshaw.Graph.Axis.Time.js\
-	src/js/Rickshaw.Graph.Axis.Y.js\
-	src/js/Rickshaw.Graph.Behavior.Series.Highlight.js\
-	src/js/Rickshaw.Graph.Behavior.Series.Order.js\
-	src/js/Rickshaw.Graph.Behavior.Series.Toggle.js\
-	src/js/Rickshaw.Graph.HoverDetail.js\
-	src/js/Rickshaw.Graph.JSONP.js\
-	src/js/Rickshaw.Graph.Legend.js\
-	src/js/Rickshaw.Graph.RangeSlider.js\
-	src/js/Rickshaw.Graph.Renderer.js\
-	src/js/Rickshaw.Graph.Renderer.Line.js\
-	src/js/Rickshaw.Graph.Renderer.Stack.js\
-	src/js/Rickshaw.Graph.Renderer.Bar.js\
-	src/js/Rickshaw.Graph.Renderer.Area.js\
-	src/js/Rickshaw.Graph.Renderer.ScatterPlot.js\
-	src/js/Rickshaw.Graph.Smoother.js\
-	src/js/Rickshaw.Graph.Unstacker.js\
-	src/js/Rickshaw.Series.js\
-	src/js/Rickshaw.Series.FixedDuration.js\
+	src/js/Jinrikisha.js\
+	src/js/Jinrikisha.Class.js\
+	src/js/Jinrikisha.Compat.ClassList.js\
+	src/js/Jinrikisha.Graph.js\
+	src/js/Jinrikisha.Fixtures.Color.js\
+	src/js/Jinrikisha.Fixtures.RandomData.js\
+	src/js/Jinrikisha.Fixtures.Time.js\
+	src/js/Jinrikisha.Fixtures.Number.js\
+	src/js/Jinrikisha.Color.Palette.js\
+	src/js/Jinrikisha.Graph.Ajax.js\
+	src/js/Jinrikisha.Graph.Annotate.js\
+	src/js/Jinrikisha.Graph.Axis.Time.js\
+	src/js/Jinrikisha.Graph.Axis.Y.js\
+	src/js/Jinrikisha.Graph.Behavior.Series.Highlight.js\
+	src/js/Jinrikisha.Graph.Behavior.Series.Order.js\
+	src/js/Jinrikisha.Graph.Behavior.Series.Toggle.js\
+	src/js/Jinrikisha.Graph.HoverDetail.js\
+	src/js/Jinrikisha.Graph.JSONP.js\
+	src/js/Jinrikisha.Graph.Legend.js\
+	src/js/Jinrikisha.Graph.RangeSlider.js\
+	src/js/Jinrikisha.Graph.Renderer.js\
+	src/js/Jinrikisha.Graph.Renderer.Line.js\
+	src/js/Jinrikisha.Graph.Renderer.Stack.js\
+	src/js/Jinrikisha.Graph.Renderer.Bar.js\
+	src/js/Jinrikisha.Graph.Renderer.Area.js\
+	src/js/Jinrikisha.Graph.Renderer.ScatterPlot.js\
+	src/js/Jinrikisha.Graph.Smoother.js\
+	src/js/Jinrikisha.Graph.Unstacker.js\
+	src/js/Jinrikisha.Series.js\
+	src/js/Jinrikisha.Series.FixedDuration.js\
 
 .PHONY: clean build
 
-build: rickshaw.min.css rickshaw.min.js
+build: jinrikisha.min.css jinrikisha.min.js
 
 clean:
-	rm -rf rickshaw.css rickshaw.js rickshaw.min.*
+	rm -rf jinrikisha.css jinrikisha.js jinrikisha.min.*
 
 $(CSS_MIN):
 	npm install clean-css
@@ -54,14 +54,14 @@ $(CSS_MIN):
 $(JS_MIN):
 	npm install uglify-js
 
-rickshaw.css:
-	cat $(CSS_FILES) > rickshaw.css
+jinrikisha.css:
+	cat $(CSS_FILES) > jinrikisha.css
 
-rickshaw.js:
-	cat $(JS_FILES) > rickshaw.js
+jinrikisha.js:
+	cat $(JS_FILES) > jinrikisha.js
 
-rickshaw.min.css: $(CSS_MIN) rickshaw.css
-	$(CSS_MIN) rickshaw.css > rickshaw.min.css
+jinrikisha.min.css: $(CSS_MIN) jinrikisha.css
+	$(CSS_MIN) jinrikisha.css > jinrikisha.min.css
 
-rickshaw.min.js: $(JS_MIN) rickshaw.js
-	$(JS_MIN) --reserved-names "\$$super" rickshaw.js > rickshaw.min.js
+jinrikisha.min.js: $(JS_MIN) jinrikisha.js
+	$(JS_MIN) --reserved-names "\$$super" jinrikisha.js > jinrikisha.min.js

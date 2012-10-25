@@ -9,33 +9,31 @@
 	<script src="../vendor/d3.v2.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js"></script>
 
-	<script src="../src/js/Rickshaw.js"></script>
-	<script src="../src/js/Rickshaw.Class.js"></script>
-	<script src="../src/js/Rickshaw.Compat.ClassList.js"></script>
-	<script src="../src/js/Rickshaw.Graph.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Renderer.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Renderer.Area.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Renderer.Line.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Renderer.Bar.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Renderer.ScatterPlot.js"></script>
-	<script src="../src/js/Rickshaw.Graph.RangeSlider.js"></script>
-	<script src="../src/js/Rickshaw.Graph.HoverDetail.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Annotate.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Legend.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Axis.Time.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Behavior.Series.Toggle.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Behavior.Series.Order.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Behavior.Series.Highlight.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Smoother.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Unstacker.js"></script>
-	<script src="../src/js/Rickshaw.Fixtures.Time.js"></script>
-	<script src="../src/js/Rickshaw.Fixtures.Number.js"></script>
-	<script src="../src/js/Rickshaw.Fixtures.RandomData.js"></script>
-	<script src="../src/js/Rickshaw.Fixtures.Color.js"></script>
-	<script src="../src/js/Rickshaw.Color.Palette.js"></script>
-	<script src="../src/js/Rickshaw.Graph.Axis.Y.js"></script>
+	<script src="../src/js/Jinrikisha.js"></script>
+	<script src="../src/js/Jinrikisha.Class.js"></script>
+	<script src="../src/js/Jinrikisha.Compat.ClassList.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Renderer.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Renderer.Area.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Renderer.Line.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Renderer.Bar.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Renderer.ScatterPlot.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.HoverDetail.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Annotate.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Legend.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Axis.Time.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Behavior.Series.Toggle.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Behavior.Series.Order.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Behavior.Series.Highlight.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Smoother.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Unstacker.js"></script>
+	<script src="../src/js/Jinrikisha.Fixtures.Time.js"></script>
+	<script src="../src/js/Jinrikisha.Fixtures.Number.js"></script>
+	<script src="../src/js/Jinrikisha.Fixtures.RandomData.js"></script>
+	<script src="../src/js/Jinrikisha.Fixtures.Color.js"></script>
+	<script src="../src/js/Jinrikisha.Color.Palette.js"></script>
+	<script src="../src/js/Jinrikisha.Graph.Axis.Y.js"></script>
 
 	<script src="js/extensions.js"></script>
 </head>
@@ -112,17 +110,17 @@
 // set up our data series with 50 random data points
 
 var seriesData = [ [], [], [], [], [], [], [], [], [] ];
-var random = new Rickshaw.Fixtures.RandomData(150);
+var random = new Jinrikisha.Fixtures.RandomData(150);
 
 for (var i = 0; i < 150; i++) {
 	random.addData(seriesData);
 }
 
-var palette = new Rickshaw.Color.Palette( { scheme: 'classic9' } );
+var palette = new Jinrikisha.Color.Palette( { scheme: 'classic9' } );
 
 // instantiate our graph!
 
-var graph = new Rickshaw.Graph( {
+var graph = new Jinrikisha.Graph( {
 	element: document.getElementById("chart"),
 	width: 900,
 	height: 500,
@@ -163,58 +161,53 @@ var graph = new Rickshaw.Graph( {
 
 graph.render();
 
-var slider = new Rickshaw.Graph.RangeSlider( {
-	graph: graph,
-	element: $('#slider')
-} );
-
-var hoverDetail = new Rickshaw.Graph.HoverDetail( {
+var hoverDetail = new Jinrikisha.Graph.HoverDetail( {
 	graph: graph
 } );
 
-var annotator = new Rickshaw.Graph.Annotate( {
+var annotator = new Jinrikisha.Graph.Annotate( {
 	graph: graph,
 	element: document.getElementById('timeline')
 } );
 
-var legend = new Rickshaw.Graph.Legend( {
+var legend = new Jinrikisha.Graph.Legend( {
 	graph: graph,
 	element: document.getElementById('legend')
 
 } );
 
-var shelving = new Rickshaw.Graph.Behavior.Series.Toggle( {
+var shelving = new Jinrikisha.Graph.Behavior.Series.Toggle( {
 	graph: graph,
 	legend: legend
 } );
 
-var order = new Rickshaw.Graph.Behavior.Series.Order( {
+var order = new Jinrikisha.Graph.Behavior.Series.Order( {
 	graph: graph,
 	legend: legend
 } );
 
-var highlighter = new Rickshaw.Graph.Behavior.Series.Highlight( {
+var highlighter = new Jinrikisha.Graph.Behavior.Series.Highlight( {
 	graph: graph,
 	legend: legend
 } );
 
-var smoother = new Rickshaw.Graph.Smoother( {
+var smoother = new Jinrikisha.Graph.Smoother( {
 	graph: graph,
 	element: $('#smoother')
 } );
 
 var ticksTreatment = 'glow';
 
-var xAxis = new Rickshaw.Graph.Axis.Time( {
+var xAxis = new Jinrikisha.Graph.Axis.Time( {
 	graph: graph,
 	ticksTreatment: ticksTreatment
 } );
 
 xAxis.render();
 
-var yAxis = new Rickshaw.Graph.Axis.Y( {
+var yAxis = new Jinrikisha.Graph.Axis.Y( {
 	graph: graph,
-	tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
+	tickFormat: Jinrikisha.Fixtures.Number.formatKMBT,
 	ticksTreatment: ticksTreatment
 } );
 
